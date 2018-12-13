@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 import com.framgia.hino.entity.ChampEntity;
+import com.framgia.hino.exception.NotFoundException;
 
 public class ChampService {
 
@@ -41,6 +42,8 @@ public class ChampService {
 	}
 
 	public static ChampEntity getChamp(String champName) {
+		if (!champs.containsKey(champName))
+			throw new NotFoundException();
 		return champs.get(champName);
 	}
 }
