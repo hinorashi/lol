@@ -16,7 +16,7 @@ public class TrollInterceptor implements HandlerInterceptor {
 
 		System.out.println("Pre Handle method is Calling");
 		response.setHeader("Hino", "preHandle!");
-		System.out.println(request.getHeaderNames());
+		// System.out.println(request.getHeaderNames());
 		return HandlerInterceptor.super.preHandle(request, response, handler); // FIXME do nothing
 	}
 
@@ -26,7 +26,7 @@ public class TrollInterceptor implements HandlerInterceptor {
 
 		System.out.println("Post Handle method is Calling");
 		response.setHeader("Hino", "postHandle!");
-//		response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+		// response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
 		// modelAndView.setStatus(HttpStatus.CONFLICT);
 		HandlerInterceptor.super.postHandle(request, response, handler, modelAndView); // FIXME do nothing
 	}
