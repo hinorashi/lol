@@ -6,18 +6,14 @@ import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @Component
-public class TrollInterceptorConfig implements WebMvcConfigurer{
+public class TrollInterceptorConfig implements WebMvcConfigurer {
 
 	@Autowired
 	TrollInterceptor trollInterceptor;
-	
+
 	@Override
 	public void addInterceptors(InterceptorRegistry registry) {
 
 		registry.addInterceptor(trollInterceptor);
-		WebMvcConfigurer.super.addInterceptors(registry); // FIXME do nothing
 	}
-
-	
-	
 }
