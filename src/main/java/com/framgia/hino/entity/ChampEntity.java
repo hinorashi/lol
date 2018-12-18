@@ -1,5 +1,7 @@
 package com.framgia.hino.entity;
 
+import java.time.LocalDate;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -16,4 +18,6 @@ public class ChampEntity {
 	private String passive;
 
 	private String skill;
+
+	private LocalDate dateCreated;
 }
