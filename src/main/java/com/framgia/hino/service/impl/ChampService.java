@@ -24,7 +24,7 @@ public class ChampService implements IChampService {
 	private static Map<String, ChampEntity> champMap = new HashMap<>();
 
 	/** currentId for storing current Champion */
-	private static AtomicInteger currentId = new AtomicInteger(4);
+	private static AtomicInteger currentId = new AtomicInteger(5);
 
 	// FIXME can be mocked with JPA?
 	static {
@@ -85,10 +85,10 @@ public class ChampService implements IChampService {
 		return champs;
 	}
 
-	public static ChampEntity getChamp(String champName) {
+	public static ChampResDto getChamp(String champName) {
 		if (!champMap.containsKey(champName))
 			throw new NotFoundException(champName + " not found!");
-		return champMap.get(champName);
+		return dtoFromEntity(champMap.get(champName));
 	}
 
 	@Override
@@ -101,7 +101,7 @@ public class ChampService implements IChampService {
 		entity.setChampId(String.valueOf(currentId.getAndIncrement()));
 		entity.setDateCreated(LocalDate.now());
 
-		champMap.put(entity.getChampId(), entity);
+		champMap.put(entity.getChampName(), entity);
 		return dtoFromEntity(entity);
 	}
 

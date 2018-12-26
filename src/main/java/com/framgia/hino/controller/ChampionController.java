@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.framgia.hino.dto.request.CreateChampReqDto;
+import com.framgia.hino.entity.ChampEntity;
 import com.framgia.hino.service.IChampService;
 import com.framgia.hino.service.impl.ChampService;
 
@@ -35,9 +36,9 @@ public class ChampionController {
 
 	@RequestMapping(value = "/{champName}", method = { RequestMethod.POST,
 			RequestMethod.GET }, produces = MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<String> read(
+	public ResponseEntity<?> read(
 			// @RequestParam(value = "champName", defaultValue = "yasuo")
 			@PathVariable("champName") String champName) {
-		return new ResponseEntity<String>(ChampService.getChamp(champName).toString(), HttpStatus.OK);
+		return new ResponseEntity<>(ChampService.getChamp(champName), HttpStatus.OK);
 	}
 }
