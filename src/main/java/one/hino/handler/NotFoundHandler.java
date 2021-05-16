@@ -1,10 +1,10 @@
-package com.framgia.hino.handler;
+package one.hino.handler;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
-import com.framgia.hino.exception.NotFoundException;
+import one.hino.exception.NotFoundException;
 
 import lombok.extern.slf4j.Slf4j;
 

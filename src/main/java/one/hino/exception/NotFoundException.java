@@ -1,4 +1,4 @@
-package com.framgia.hino.exception;
+package one.hino.exception;
 
 public class NotFoundException extends RuntimeException {
 

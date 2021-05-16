@@ -1,4 +1,4 @@
-package com.framgia.hino.dto.request;
+package one.hino.dto.request;
 
 import javax.validation.constraints.NotBlank;
 

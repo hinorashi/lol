@@ -1,4 +1,4 @@
-package com.framgia.hino;
+package one.hino;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;

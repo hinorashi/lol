@@ -1,4 +1,4 @@
-package com.framgia.hino.controller;
+package one.hino.controller;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.framgia.hino.dto.request.AddChampDto;
-import com.framgia.hino.service.ChampService;
+import one.hino.dto.request.AddChampDto;
+import one.hino.service.ChampService;
 
 @RestController
 @RequestMapping("/champions")

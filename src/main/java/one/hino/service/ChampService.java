@@ -1,11 +1,11 @@
-package com.framgia.hino.service;
+package one.hino.service;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.framgia.hino.entity.ChampEntity;
+import one.hino.entity.ChampEntity;
 
 public class ChampService {
 
